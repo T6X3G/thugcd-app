@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thugcd-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: thugcd
+  template:
+    metadata:
+      labels:
+        app: thugcd
+    spec:
+      containers:
+      - name: thugcd
+        image: nginx
+        ports:
+        - containerPort: 80
