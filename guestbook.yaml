@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: guestbook
+spec:
+  containers:
+  - name: guestbook
+    image: nginx
+    ports:
+    - containerPort: 80
